@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Metadata para PWA  -->
+    <!-- Color de barra de estado ANDROID -->
+    <meta name="theme-color" content="#41b883">
+    <!-- Optimizacion de SEO para decir que es compatible con Dispositivo -->
+    <meta name="MobileOptimized" content="width">
+    <!-- Optimizacion de SEO para decir que es de uso para dispositivo -->
+    <meta name="HandheldFriendly" content="true">
+    <!-- Color de barra de estado IOS -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Fin Metadata para PWA  -->
+
+    <title>Contador app</title>
+
+    <!-- Iconos  -->
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+    <!-- Icono para descargar aplicacion en el navegador  -->
+    <link rel="apple-touch-icon" href="./img/favicon.png">
+    <!-- Icono que se muestra en la pantalla al renderizar la aplicacion  -->
+    <link rel="apple-touch-startup-image" href="./img/favicon.png">
+    <!-- Fin Iconos  -->
+
+    <!-- Manifest  -->
+    <link rel="manifest" href="manifest.json">
+
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+
+<body>
+    <div id="app" class="app">
+        <h1 class="title">{{title}}</h1>
+        <hr>
+        <h3 class="count">{{count}}</h3>
+        <hr>
+        <div>
+            <!-- <button v-on:click="disCount()">-1</button>
+            <button @click="addCount()">+1</button> -->
+            <button v-on:click="modCount('dis', 10)">-10</button>
+            <button @click="modCount('add', 10)">+10</button>
+        </div>
+    </div>
+
+    <script src="./load.js"></script>
+
+    <script src="./js/main.js"></script>
+    <script src="./js/mountApp.js"></script>
+</body>
+
+</html>
